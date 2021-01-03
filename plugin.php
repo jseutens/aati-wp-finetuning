@@ -38,3 +38,14 @@
 add_filter( 'wp_is_application_passwords_available', '__return_false' );
 add_filter( 'allow_major_auto_core_updates', '_return_false' );
 // can be found in https://wordpress.org/plugins/clearfy/ but its to big , just need a few parts of it , don't want to change it on multiple sites seperate so only code solutions like the emojis plugin are an option
+// also see https://blacksaildivision.com/how-to-clean-up-wordpress-head-tag
+/**
+ * Remove info about WordPress version from <head>
+ */
+remove_action('wp_head', 'wp_generator');
+/**
+ * Disable XML-RPC
+ */
+add_filter('xmlrpc_enabled', function (): bool {
+    return false;
+});
