@@ -3,7 +3,7 @@
   Plugin Name: AATI WP Finetuning
   Plugin URI: https://github.com/jseutens/aati-wp-finetuning/
   Description: Finetuning a WP setup by removing or adding options
-  Version: 0.1
+  Version: 0.2
   Author: Johan Seutens
   Author URI: https://www.aati.be
   Text Domain: aatiwpfinetuning
@@ -49,3 +49,43 @@ remove_action('wp_head', 'wp_generator');
 add_filter('xmlrpc_enabled', function (): bool {
     return false;
 });
+
+/**
+ * Remove XML-RPC link from <head>
+ */
+remove_action('wp_head', 'rsd_link');
+
+/**
+ * Disable RSS feeds by redirecting their URLs to homepage
+ */
+foreach (['do_feed_rss2', 'do_feed_rss2_comments'] as $feedAction) {
+    add_action($feedAction, function (): void {
+        // Redirect permanently to homepage
+        wp_redirect(home_url(), 301);
+        exit;
+    }, 1);
+}
+/**
+ * Remove the feed links from <head>
+ */
+remove_action('wp_head', 'feed_links', 2);
+/**
+ * Disable REST-API for all users except of admin
+ */
+add_filter('rest_authentication_errors', function ($access) {
+    if (!current_user_can('administrator')) {
+        return new WP_Error('rest_cannot_access', 'Only authenticated users can access the REST API.', ['status' => rest_authorization_required_code()]);
+    }
+    return $access;
+});
+
+/**
+ * Remove REST-AI link from <head>
+ */
+remove_action('wp_head', 'rest_output_link_wp_head');
+
+/**
+ * Remove Windows Live Writer manifest from <head>
+ */
+remove_action('wp_head', 'wlwmanifest_link');
+
