@@ -4,6 +4,7 @@ Tags: aati finetuning
 Requires at least: 5.6
 Tested up to: 5.6
 Requires PHP: 7.4
+Stable tag: trunk
 License: GPL 3.0
 License URI: https://github.com/jseutens/aati-wp-finetuning/blob/main/LICENSE.txt
 
