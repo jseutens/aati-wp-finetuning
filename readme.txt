@@ -1,5 +1,5 @@
 === aati-wp-finetuning ===
-Contributors: Johan Seutens
+Contributors: jseutens
 Tags: aati finetuning
 Requires at least: 5.6
 Tested up to: 5.6
