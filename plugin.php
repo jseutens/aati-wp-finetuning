@@ -1,33 +1,15 @@
 <?php
 /*
-  Plugin Name: AATI WP Finetuning
-  Plugin URI: https://github.com/jseutens/aati-wp-finetuning/
-  Description: Finetuning a WP setup by removing or adding options
-  Version: 0.3
-  Author: Johan Seutens
-  Author URI: https://www.aati.be
-  Text Domain: aatiwpfinetuning
-  Domain Path: /languages/
-	License: GPLv3
-	License URI: http://www.gnu.org/licenses/gpl-3.0.txt
-
-	Copyright (C) 2021 by AATI <https://www.aati.be>
-
-	This file is part of AATI WP Finetuning.
-
-	AATI WP Finetuning is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
-
-	AATI WP Finetuning is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with AATI WP Finetuning; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+Plugin Name: AATI WP Finetuning
+Plugin URI: https://github.com/jseutens/aati-wp-finetuning/
+Description: Finetuning a WP setup by removing or adding options
+Version: 0.3
+Author: Johan Seutens
+Author URI: https://www.aati.be
+Text Domain: aatiwpfinetuning
+Domain Path: /languages/
+License: GPLv2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 // REMOVE WP EMOJI
