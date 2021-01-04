@@ -72,13 +72,15 @@ remove_action('wp_head', 'feed_links', 2);
 /**
  * Disable REST-API for all users except of admin
  */
+/**
+Disabling rest-api is a bad idea for now , CF7 broke down with a 401 not authorized
 add_filter('rest_authentication_errors', function ($access) {
     if (!current_user_can('administrator')) {
         return new WP_Error('rest_cannot_access', 'Only authenticated users can access the REST API.', ['status' => rest_authorization_required_code()]);
     }
     return $access;
 });
-
+ */
 /**
  * Remove REST-AI link from <head>
  */
