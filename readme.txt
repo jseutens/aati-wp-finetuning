@@ -4,7 +4,7 @@ Tags: aati finetuning
 Requires at least: 5.6
 Tested up to: 5.6
 Requires PHP: 7.4
-Stable tag: 0.2.0
+Stable tag: 0.3.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,8 @@ This section describes how to install the plugin and get it working.
 no faq , read the script :-) it is well documented ;-)
 
 == Changelog ==
+= 0.3.0 =
+* commented out the rest-api disabling , broke CF7
 = 0.2.0 =
 * updates for headers
 = 0.1.0 =
