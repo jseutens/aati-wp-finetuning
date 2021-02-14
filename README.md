@@ -9,4 +9,7 @@ read this also https://www.jemjabella.co.uk/2019/10-micro-optimisations-for-a-fa
 2 is done by wp-rocket , 5 with the disable emoji plugin
 
 
+changing structure acourding to 
+https://learnwithdaniel.com/2019/09/publishing-your-first-wordpress-plugin-with-git-and-svn/
+
 read the readme.txt file for more info
