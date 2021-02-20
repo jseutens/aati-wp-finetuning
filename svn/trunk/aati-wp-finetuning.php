@@ -73,3 +73,13 @@ remove_action('wp_head', 'rest_output_link_wp_head');
  */
 remove_action('wp_head', 'wlwmanifest_link');
 
+//  copied from https://github.com/miconda/wp-fail2ban-addon-cf7log
+// see https://contactform7.com/2020/07/18/custom-spam-filtering/
+    function wpcf7log_filter_spam( $spam )
+    {
+        openlog('wpcf7log', LOG_PID, LOG_DAEMON);
+        syslog(LOG_NOTICE, "contact form 7 submission from {$_SERVER['REMOTE_ADDR']}");
+        closelog();
+        return $spam;
+    }
+    add_filter( 'wpcf7_spam', wpcf7log_filter_spam, 100, 1);

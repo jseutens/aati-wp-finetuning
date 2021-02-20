@@ -1,10 +1,10 @@
 === aati-wp-finetuning ===
 Contributors: jseutens
-Tags: aati finetuning
+Tags: aati finetuning cf7 fail2ban
 Requires at least: 5.6
 Tested up to: 5.6
 Requires PHP: 7.4
-Stable tag: 0.3.0
+Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,8 +19,13 @@ This section describes how to install the plugin and get it working.
 
 == Frequently Asked Questions ==
 no faq , read the script :-) it is well documented ;-)
+Included in the comments of the script from where I got each entry.
 
 == Changelog ==
+= 0.5.0 =
+* added logging cf7 submissions for fail2ban (only usefull if fail2ban is active)
+* added translations
+* changed name of plugin.php to aati-wp-finetuning.php
 = 0.4.0 =
 Prepared for first svn publication on wp repository
 = 0.3.0 =
