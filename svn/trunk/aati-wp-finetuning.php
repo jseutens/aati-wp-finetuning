@@ -3,7 +3,7 @@
 Plugin Name: AATI WP Finetuning
 Plugin URI: https://github.com/jseutens/aati-wp-finetuning/
 Description: Finetuning a WP setup by removing or adding options
-Version: 0.5
+Version: 0.5.1
 Author: Johan Seutens
 Author URI: https://www.aati.be
 Text Domain: aatiwpfinetuning
@@ -75,11 +75,12 @@ remove_action('wp_head', 'wlwmanifest_link');
 
 //  copied from https://github.com/miconda/wp-fail2ban-addon-cf7log
 // see https://contactform7.com/2020/07/18/custom-spam-filtering/
-    function wpcf7log_filter_spam( $spam )
-    {
+// miconda his function :  PHP Warning:  Use of undefined constant wpcf7log_filter_spam - assumed 'wpcf7log_filter_spam' (this will throw an Error in a future version of PHP) 
+// instead of declaring  I revoked it as the add filter works too
+add_filter( 'wpcf7_spam', function( $spam ) {
         openlog('wpcf7log', LOG_PID, LOG_DAEMON);
         syslog(LOG_NOTICE, "contact form 7 submission from {$_SERVER['REMOTE_ADDR']}");
         closelog();
-        return $spam;
-    }
-    add_filter( 'wpcf7_spam', wpcf7log_filter_spam, 100, 1);
+  return $spam;
+}, 100, 1 );
+

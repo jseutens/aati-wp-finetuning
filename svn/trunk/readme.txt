@@ -4,7 +4,7 @@ Tags: aati finetuning cf7 fail2ban
 Requires at least: 5.6
 Tested up to: 5.6
 Requires PHP: 7.4
-Stable tag: 0.5.0
+Stable tag: 0.5.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,8 @@ no faq , read the script :-) it is well documented ;-)
 Included in the comments of the script from where I got each entry.
 
 == Changelog ==
+= 0.5.1 =
+* BUG FIX: PHP Warning:  Use of undefined constant wpcf7log_filter_spam - assumed 'wpcf7log_filter_spam' (this will throw an Error in a future version of PHP) 
 = 0.5.0 =
 * added logging cf7 submissions for fail2ban (only usefull if fail2ban is active)
 * added translations
