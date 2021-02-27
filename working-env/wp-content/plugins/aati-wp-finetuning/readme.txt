@@ -30,6 +30,7 @@ What's up next
 * BUG FIX loading file directly is now disabled
 * added uninstall.php file for future use
 * removed auto site maps , need to use a decent sitemap , not all exposed automaticly
+* BUG FIX changing add filters to correct syntax
 = 0.5.2 =
 * BUG FIX language files renamed to correct names
 = 0.5.1 =
