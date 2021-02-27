@@ -3,18 +3,14 @@
 Plugin Name: AATI WP Finetuning
 Plugin URI: https://github.com/jseutens/aati-wp-finetuning/
 Description: Finetuning a WP setup by removing or adding options
-Version: 0.5.3
+Version: 0.5.2
 Author: Johan Seutens
 Author URI: https://www.aati.be
 Text Domain: aatiwpfinetuning
 Domain Path: /languages/
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-*/
-
-	if ( ! defined( 'ABSPATH' ) ) {
-	        exit; // Exit if accessed directly.
-	}
+ */
 
 // REMOVE WP EMOJI
 // Done by the plugin :  Disable Emojis (GDPR friendly)
