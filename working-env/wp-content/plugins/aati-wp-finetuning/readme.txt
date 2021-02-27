@@ -28,6 +28,8 @@ What's up next
 == Changelog ==
 = 0.5.3 =
 * BUG FIX loading file directly is now disabled
+* added uninstall.php file for future use
+* removed auto site maps , need to use a decent sitemap , not all exposed automaticly
 = 0.5.2 =
 * BUG FIX language files renamed to correct names
 = 0.5.1 =
