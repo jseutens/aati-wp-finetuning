@@ -11,7 +11,9 @@ Domain Path: /languages/
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-if (!defined('ABSPATH')) die();
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 // remove WP auto sitemaps
 //https://wordpress.org/plugins/disable-wp-sitemaps/
 add_filter('wp_sitemaps_enabled', '__return_false');
