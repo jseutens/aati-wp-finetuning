@@ -11,15 +11,14 @@ Domain Path: /languages/
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
-
-	if ( ! defined( 'ABSPATH' ) ) {
-	        exit; // Exit if accessed directly.
-	}
-
+if (!defined('ABSPATH')) die();
+// remove WP auto sitemaps
+//https://wordpress.org/plugins/disable-wp-sitemaps/
+add_filter('wp_sitemaps_enabled', '__return_false');
+//
 // REMOVE WP EMOJI
 // Done by the plugin :  Disable Emojis (GDPR friendly)
 // no need to do this again when a plugin exists
-
 // these are tips from https://www.jemjabella.co.uk/2019/10-micro-optimisations-for-a-faster-wordpress-website/
 add_filter( 'wp_is_application_passwords_available', '__return_false' );
 add_filter( 'allow_major_auto_core_updates', '_return_false' );
@@ -35,12 +34,12 @@ remove_action('wp_head', 'wp_generator');
 add_filter('xmlrpc_enabled', function (): bool {
     return false;
 });
-
+//
 /**
  * Remove XML-RPC link from <head>
  */
 remove_action('wp_head', 'rsd_link');
-
+//
 /**
  * Disable RSS feeds by redirecting their URLs to homepage
  */
@@ -71,12 +70,12 @@ add_filter('rest_authentication_errors', function ($access) {
  * Remove REST-AI link from <head>
  */
 remove_action('wp_head', 'rest_output_link_wp_head');
-
+//
 /**
  * Remove Windows Live Writer manifest from <head>
  */
 remove_action('wp_head', 'wlwmanifest_link');
-
+//
 //  copied from https://github.com/miconda/wp-fail2ban-addon-cf7log
 // see https://contactform7.com/2020/07/18/custom-spam-filtering/
 // miconda his function :  PHP Warning:  Use of undefined constant wpcf7log_filter_spam - assumed 'wpcf7log_filter_spam' (this will throw an Error in a future version of PHP) 
@@ -87,4 +86,4 @@ add_filter( 'wpcf7_spam', function( $spam ) {
         closelog();
   return $spam;
 }, 100, 1 );
-
+//
