@@ -33,9 +33,11 @@ remove_action('wp_head', 'wp_generator');
 /**
  * Disable XML-RPC
  */
-add_filter('xmlrpc_enabled', function (): bool {
-    return false;
-});
+//add_filter('xmlrpc_enabled', function (): bool {
+//    return false;
+//});
+//https://developer.wordpress.org/reference/hooks/xmlrpc_enabled/
+add_filter( 'xmlrpc_enabled', '__return_false' );
 //
 /**
  * Remove XML-RPC link from <head>
