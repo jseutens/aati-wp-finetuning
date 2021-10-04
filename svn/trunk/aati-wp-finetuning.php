@@ -3,7 +3,7 @@
 Plugin Name: AATI WP Finetuning
 Plugin URI: https://github.com/jseutens/aati-wp-finetuning/
 Description: Finetuning a WP setup by removing or adding options
-Version: 0.5.2
+Version: 0.5.3
 Author: Johan Seutens
 Author URI: https://www.aati.be
 Text Domain: aatiwpfinetuning
