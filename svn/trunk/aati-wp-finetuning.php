@@ -84,3 +84,11 @@ add_filter( 'wpcf7_spam', function( $spam ) {
   return $spam;
 }, 100, 1 );
 
+//https://wordpress.stackexchange.com/questions/161476/how-to-remove-dashicons-min-css-from-frontend
+// Remove dashicons in frontend for unauthenticated users
+add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
+function bs_dequeue_dashicons() {
+    if ( ! is_user_logged_in() ) {
+        wp_deregister_style( 'dashicons' );
+    }
+}
