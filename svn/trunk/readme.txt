@@ -2,9 +2,9 @@
 Contributors: jseutens
 Tags: aati finetuning cf7 fail2ban
 Requires at least: 5.6
-Tested up to: 5.6
+Tested up to: 5.8
 Requires PHP: 7.4
-Stable tag: 0.5.2
+Stable tag: 0.5.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,8 @@ no faq , read the script :-) it is well documented ;-)
 Included in the comments of the script from where I got each entry.
 
 == Changelog ==
+= 0.5.3 =
+added removing dashicons for not logged on users
 = 0.5.2 =
 BUG FIX language files renamed to correct names
 = 0.5.1 =
