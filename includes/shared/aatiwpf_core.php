@@ -24,8 +24,20 @@ foreach (['do_feed_rss2', 'do_feed_rss2_comments'] as $feedAction) {
         exit;
     }, 1);
 }
-
-
+// athor redirect so that the username is not visible when redirecting even when the folder is forbidden
+function disable_author_redirect() {
+    if (is_author()) {
+        global $wp_query;
+        $author_id = $wp_query->query_vars['author'];
+        if (is_numeric($author_id) && intval($author_id) > 0) {
+            wp_redirect(home_url(), 301);
+            exit;
+        }
+    }
+}
+//add_action('template_redirect', 'disable_author_redirect');
+// make sure all is excecuted before all
+add_action('template_redirect', 'disable_author_redirect', -9999);
 /**
  * Disable REST-API for all users except of admin
  */

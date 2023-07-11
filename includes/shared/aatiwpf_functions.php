@@ -21,6 +21,17 @@ function aatiwpf_clean_head() {
 	remove_action('wp_head', 'feed_links', 2);
 	//Remove REST-AI link from <head>
 	remove_action('wp_head', 'rest_output_link_wp_head', 10);
+    remove_action('wp_head', 'wp_oembed_add_discovery_links');
+    remove_action('wp_head', 'wp_oembed_add_host_js');
+    remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
+    remove_filter('pre_oembed_result', 'wp_filter_pre_oembed_result', 10);
+	    // Disable oEmbed REST API endpoint
+    add_filter('rest_endpoints', function ($endpoints) {
+        if (isset($endpoints['/oembed/1.0/embed'])) {
+            unset($endpoints['/oembed/1.0/embed']);
+        }
+        return $endpoints;
+    });
 }
 add_action('init', 'aatiwpf_clean_head');
 //
