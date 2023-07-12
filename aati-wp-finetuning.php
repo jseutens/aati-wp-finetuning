@@ -3,7 +3,7 @@
 Plugin Name: AATI WP Finetuning
 Plugin URI: https://github.com/jseutens/aati-wp-finetuning/
 Description: Finetuning a WP setup by removing or adding options
-Version: 0.8.0
+Version: 0.8.6
 Author: Johan Seutens
 Author URI: https://www.aati.be
 Text Domain: aatiwpfinetuning
@@ -20,7 +20,7 @@ define( 'AATIWPF_PLUGIN_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) )
 define( 'AATIWPF_PLUGIN_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'AATIWPF_PLUGIN_FNAME', plugin_basename( __FILE__ ) );
 define( 'AATIWPF_PLUGIN_DIRNAME', plugin_basename( dirname( __FILE__ ) ) );
-define( 'AATIWPF_VERSION', '0.8.0' );
+define( 'AATIWPF_VERSION', '0.8.6' );
 define( 'AATIWPF_TEXTDOMAIN', 'aatiwpfinetuning');
 define( 'AATIWPF_UPLOAD_DIR', wp_upload_dir() );
 if (isset($_SERVER['HTTP_HOST'])) {
@@ -66,3 +66,4 @@ require('includes/shared/aatiwpf_anti-spam_wsform.php');
 }
 require('includes/admin/aatiwpf_settings.php');
 require('includes/admin/aatiwpf_admin_page.php');
+require('includes/admin/aatiwpf_cron.php');

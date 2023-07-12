@@ -1,10 +1,10 @@
 === aati-wp-finetuning ===
 Contributors: jseutens
-Tags: aati finetuning cf7 fail2ban login logon security wsform
+Tags: aati finetuning cf7 fail2ban login logon security wsform cronjob
 Requires at least: 6.1.1
-Tested up to: 6.1.1
-Requires PHP: 7.4
-Stable tag: 0.8.0
+Tested up to: 6.2
+Requires PHP: 8.1
+Stable tag: 0.8.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,10 +40,23 @@ Get the values to change from these files
 /wp-admin/css/login.min.css
 
 What's up next
+* adding an admin page with the used values and display handy information instead of admin notices.
 * maybe having a whitelist ip addresses that have access to /wp-json/wp/v2/users/ so that the rest of the api still works but is blocked to see users except for local IP and the server IP's itself and others. Needs testing and research.
 
 
 == Changelog ==
+ = 0.8.6 = 
+	global $is_server_cron_active; was on wrong spot , again a bugfix
+ = 0.8.5 = 
+ * removing REST-AI link and oEmbed REST API endpoint
+ = 0.8.4 =
+* cron check only runs for admins 
+ = 0.8.3 =
+* typos and moving cron file , added icons
+ = 0.8.2 =
+* add admin notice to add server side cronjob , if active change wp-settings page , if not possible make sure that admin notice is there with example. If to annoying probably will move it in the upcming admin page
+ = 0.8.1 =
+* Redirect author pages to root
  = 0.8.0 =
 * added WS Form fail2ban , use wordpress action hook name : wsf_action_tag , works only on pro version.
  = 0.7.2 =
@@ -107,3 +120,11 @@ Prepared for first svn publication on wp repository
 
 == Upgrade Notice ==
 upgrade as you please
+
+== Screenshots ==
+
+1. ![Screenshot 1](screenshots/screenshot-1.png)
+   Description of the screenshot.
+
+2. ![Screenshot 2](screenshots/screenshot-2.png)
+   Description of the screenshot.
