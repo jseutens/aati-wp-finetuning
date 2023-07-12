@@ -1,10 +1,10 @@
 === aati-wp-finetuning ===
 Contributors: jseutens
-Tags: aati finetuning cf7 fail2ban login logon security wsform cronjob
-Requires at least: 6.1.1
+Tags: aati finetuning fail2ban login logon security cronjob
+Requires at least: 6.2
 Tested up to: 6.2
-Requires PHP: 8.1
-Stable tag: 0.8.6
+Requires PHP: 8.2
+Stable tag: 0.8.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,10 +45,14 @@ What's up next
 
 
 == Changelog ==
+ = 0.8.8 = 
+ * typos
+ = 0.8.7 = 
+* added screenshot placeholders   
  = 0.8.6 = 
-	global $is_server_cron_active; was on wrong spot , again a bugfix
+* global $is_server_cron_active; was on wrong spot , again a bugfix
  = 0.8.5 = 
- * removing REST-AI link and oEmbed REST API endpoint
+* removing REST-AI link and oEmbed REST API endpoint
  = 0.8.4 =
 * cron check only runs for admins 
  = 0.8.3 =
