@@ -1,10 +1,10 @@
 === aati-wp-finetuning ===
 Contributors: jseutens
 Tags: aati finetuning fail2ban login logon security cronjob
-Requires at least: 6.2
-Tested up to: 6.2
-Requires PHP: 8.2
-Stable tag: 0.8.8
+Requires at least: 6.0
+Tested up to: 6.3
+Requires PHP: 5.6
+Stable tag: 0.8.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,8 @@ What's up next
 
 
 == Changelog ==
+ = 0.8.8 = 
+ * php and wp version changes
  = 0.8.8 = 
  * typos
  = 0.8.7 = 
