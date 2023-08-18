@@ -65,17 +65,15 @@ function custom_wp_remove_global_css() {
 add_action( 'init', 'custom_wp_remove_global_css' );
 
 
-function deactivate_gravatar() {
-  // Get the current settings for avatars.
-  $avatar_settings = get_option('avatar_settings');
+// First, define the deactivate_gravatar function
+function AATIWPF_deactivate_gravatar() {
+    // Get the current setting for avatars.
+    $show_avatars = get_option('show_avatars');
 
-  // Check if the `show_avatars` option is true.
-  if ($avatar_settings['show_avatars'] === true) {
-    // Set the `show_avatars` option to false.
-    $avatar_settings['show_avatars'] = false;
-
-    // Update the settings.
-    update_option('avatar_settings', $avatar_settings);
-  }
+    // Check if the `show_avatars` option is true.
+    if ($show_avatars == '1') { // It might be stored as a string '1' for true
+        // Set the `show_avatars` option to false.
+        update_option('show_avatars', '0'); // '0' for false
+    }
 }
-add_action('admin_init', 'deactivate_gravatar');
+add_action('admin_init', 'AATIWPF_deactivate_gravatar');
