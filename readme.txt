@@ -1,10 +1,10 @@
 === aati-wp-finetuning ===
 Contributors: jseutens
 Tags: aati finetuning fail2ban login logon security cronjob
-Requires at least: 6.0
+Requires at least: 6.2.2
 Tested up to: 6.3
-Requires PHP: 5.6
-Stable tag: 0.8.9
+Requires PHP: 7.4
+Stable tag: 0.9.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,7 +45,11 @@ What's up next
 
 
 == Changelog ==
- = 0.8.8 = 
+ = 0.9.0 = 
+ * php and wp version changes , typos 
+ * debugging failure for wpmain to update the plugin
+ * added forced gravatar disabling, so I don't need to set this and think about it
+ = 0.8.9 = 
  * php and wp version changes
  = 0.8.8 = 
  * typos
